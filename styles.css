@@ -26,12 +26,11 @@ body {
 .calculator-container {
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
 }
 
 .header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,9 +185,8 @@ input:focus, select:focus {
 }
 
 .watermark {
-    position: static;
     text-align: right;
-    margin: -20px 0 20px 0;
+    margin: 0 0 15px 0;
     color: var(--secondary-text);
     font-size: 12px;
     font-style: italic;
