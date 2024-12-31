@@ -220,4 +220,19 @@ input:focus, select:focus {
     .calculate-btn {
         padding: 12px;
     }
+}
+
+/* 修改顶部的狗爪图标颜色 */
+.header i.material-icons {
+    color: var(--primary-color);
+}
+
+/* 修改提示信息的图标颜色 */
+.status-note i.material-icons {
+    color: var(--primary-color);
+}
+
+/* 修改计算按钮的图标颜色 */
+.calculate-btn i.material-icons {
+    color: white;  /* 按钮内的图标保持白色 */
 } 
