@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狗粮能量计算器</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 添加Material Icons字体 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="watermark">开发者：鸡毛柠檬他爸</div>
+        <div class="header">
+            <i class="material-icons">pets</i>
+            <h1>狗粮能量计算器</h1>
+        </div>
+        
+        <div class="card">
+            <h2>基本信息</h2>
+            <div class="input-group">
+                <label for="weight">狗狗体重 (kg)</label>
+                <input type="number" id="weight" step="0.1" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="derFactor">狗狗状态</label>
+                <div class="status-note">
+                    <i class="material-icons">info</i>
+                    不同状态和生命阶段的狗狗需要计算的取值系数不一样，请准确选择
+                </div>
+                <select id="derFactor">
+                    <option value="1.6">绝育后成犬</option>
+                    <option value="1.8">未绝育成犬</option>
+                    <option value="1.3">不活泼/肥胖倾向成犬</option>
+                    <option value="1.0">需要减肥成犬</option>
+                    <option value="2.0">轻度工作犬</option>
+                    <option value="3.0">中度工作犬</option>
+                    <option value="6.0">重度劳动犬</option>
+                    <option value="1.8">妊娠前42天</option>
+                    <option value="3.0">妊娠后21天</option>
+                    <option value="4.5">哺乳期妈妈犬</option>
+                    <option value="1.5">老龄犬</option>
+                    <option value="3.0">断奶至四月龄幼犬</option>
+                    <option value="2.0">4月龄以上幼犬</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>狗粮成分 (%)</h2>
+            <div class="nutrition-grid">
+                <div class="input-group">
+                    <label for="protein">粗蛋白比例</label>
+                    <input type="number" id="protein" step="0.1" min="0" max="100" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fat">粗脂肪比例</label>
+                    <input type="number" id="fat" step="0.1" min="0" max="100" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fiber">粗纤维比例</label>
+                    <input type="number" id="fiber" step="0.1" min="0" max="100" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="ash">粗灰分比例</label>
+                    <input type="number" id="ash" step="0.1" min="0" max="100" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="moisture">含水率</label>
+                    <input type="number" id="moisture" step="0.1" min="0" max="100" required>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="calculate()" class="calculate-btn">
+            <i class="material-icons">calculate</i>
+            计算
+        </button>
+
+        <div class="results card" id="results">
+            <h2>计算结果</h2>
+            <div class="result-item secondary">
+                <span>静息能量需求 RER (kcal)</span>
+                <span id="rerResult">-</span>
+            </div>
+            <div class="result-item secondary">
+                <span>每日能量需求 MER (kcal)</span>
+                <span id="merResult">-</span>
+            </div>
+            <div class="result-item secondary">
+                <span>每千克狗粮代谢能 (kcal)</span>
+                <span id="meResult">-</span>
+            </div>
+            <div class="result-item primary">
+                <span>建议每日饲喂狗粮量 (g)</span>
+                <span id="foodAmount">-</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
