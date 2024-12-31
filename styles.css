@@ -186,9 +186,9 @@ input:focus, select:focus {
 }
 
 .watermark {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: static;
+    text-align: right;
+    margin: -20px 0 20px 0;
     color: var(--secondary-text);
     font-size: 12px;
     font-style: italic;
@@ -219,12 +219,6 @@ input:focus, select:focus {
 
     .calculate-btn {
         padding: 12px;
-    }
-
-    .watermark {
-        position: static;
-        text-align: right;
-        margin-bottom: 10px;
     }
 }
 

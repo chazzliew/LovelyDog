@@ -51,6 +51,13 @@ function validateInputs(weight, protein, fat, fiber, ash, moisture) {
     
     // 检查所有成分总和是否超过100%
     if (protein + fat + fiber + ash > 1) return false;
+
+    // 检查是否选择了狗狗状态
+    const derFactor = document.getElementById('derFactor').value;
+    if (!derFactor) {
+        alert('请选择狗狗状态！');
+        return false;
+    }
     
     return true;
 } 
