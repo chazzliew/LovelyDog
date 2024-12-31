@@ -220,6 +220,12 @@ input:focus, select:focus {
     .calculate-btn {
         padding: 12px;
     }
+
+    .watermark {
+        position: static;
+        text-align: right;
+        margin-bottom: 10px;
+    }
 }
 
 /* 修改顶部的狗爪图标颜色 */
@@ -235,4 +241,10 @@ input:focus, select:focus {
 /* 修改计算按钮的图标颜色 */
 .calculate-btn i.material-icons {
     color: white;  /* 按钮内的图标保持白色 */
+}
+
+/* 添加新的 emoji 图标样式 */
+.header-icon {
+    font-size: 32px;
+    margin-right: 8px;
 } 
